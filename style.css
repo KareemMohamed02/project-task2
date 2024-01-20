@@ -1,0 +1,137 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Lexend Deca;
+  }
+  
+  .main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(233, 47%, 7%);
+  }
+  
+  .container {
+    max-width: 80rem;
+    margin: auto;
+    padding: 1rem;
+  }
+  
+  .card {
+    border-radius: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: hsl(244, 38%, 16%);
+  }
+  
+  .card-body {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-header {
+    color: hsl(0, 0%, 100%);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card-word-insights {
+    color: hsl(277, 64%, 61%);
+  }
+  
+  .card-brief {
+    line-height: 1.5;
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 6rem;
+  }
+  
+  .analysis {
+    margin-top: auto;
+  }
+  
+  .analysis-body {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .analysis-points {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .analysis-value {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+  }
+  
+  .analysis-title {
+    font-family: Inter;
+    text-transform: uppercase;
+    font-size: 0.833rem;
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+  
+  .card-figure-picture {
+    background-size: cover;
+    background-image: 
+    linear-gradient(
+        hsla(277, 64%, 61%, 0.5),
+        hsla(277, 64%, 61%, 0.5)
+      ),
+      url("images/image-header-desktop.jpg");
+  }
+
+  /*enta m3amaltesh @media hena ll mobile*/
+
+  @media (max-width: 38rem) {
+    .container {
+      --width: 30rem;
+    }
+    
+    .card {
+      grid-template-columns: 1fr;
+    }
+    
+    .card-figure-picture {
+      height: 250px;
+      order: -1;
+      background-image:
+      linear-gradient(
+        hsla(277, 64%, 61%, 0.5),
+        hsla(277, 64%, 61%, 0.5)
+      ),
+        url("images/image-header-mobile.jpg");
+    }
+
+    .card-header {
+      font-size: 2rem;
+    }
+  
+    .card-body {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card-brief {
+      margin-bottom: 3rem;
+    }
+      
+    .analysis-body {
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+
+  }
+  
+  
